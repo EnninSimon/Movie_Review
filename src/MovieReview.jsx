@@ -38,10 +38,10 @@ class MovieReview extends Component {
                                         <Card.Title><h4 style={{ fontWeight: "500" }}>{movie.headline}</h4></Card.Title>
                                         <Card.Text>{movie.summary_short}</Card.Text>
                                         <Card.Text style={{ textAlign: "center" }}>Date: {movie.date_updated}</Card.Text>
-                                        <Button variant="outline-dark" style={{ marginRight: "20px" }}>
-                                            <a style={{textDecoration:"none", color:"inherit"}} target="_blank" href={movie.link.url}>Watch</a>
-                                        </Button>
                                     </Card.Body>
+                                    <Button variant="outline-dark" style={{ marginRight: "20px", width:"100%" }}>
+                                            <a style={{textDecoration:"none", color:"inherit"}} target="_blank" href={movie.link.url}>Watch</a>
+                                    </Button>
                                 </Card>
                                 <br />
                         </Col>
