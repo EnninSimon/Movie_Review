@@ -28,26 +28,28 @@ class MovieReview extends Component {
             <Container fluid="md" style={{ display: "block" }}>
                 <h1 style={{ textAlign: "center", marginTop: "20px", fontFamily: "courier" }}>New York Times Movie Reviews</h1>
                 <br />
+                <div className="col-md-12">
                 {this.state.movie_reviews.map((movie) =>
-                    <Row style={{ textAlign: "center" }}>
-                        <Col style={{ margin: "10px 0px", alignItems: "center" }}>
-                            <Card border="primary" style={{ height: '23rem' }}>
-                                <Card.Header><h3 style={{ fontFamily: "arial" }}>{movie.display_title}</h3></Card.Header>
-                                <Card.Title style={{ marginTop: "8px" }}>({movie.byline})</Card.Title>
-                                <Card.Body>
-                                    <Card.Title><h4 style={{ fontWeight: "500" }}>{movie.headline}</h4></Card.Title>
-                                    <Card.Text>{movie.summary_short}</Card.Text>
-                                    <Card.Text style={{ textAlign: "center" }}>Date: {movie.date_updated}</Card.Text>
+                        <Row style={{ textAlign: "center" }}>
+                            <Col style={{ margin: "10px 0px", alignItems: "center" }}>
+                                <Card border="primary" >
+                                    <Card.Header><h3 style={{ fontFamily: "arial" }}>{movie.display_title}</h3></Card.Header>
+                                    <Card.Title style={{ marginTop: "8px" }}>({movie.byline})</Card.Title>
+                                    <Card.Body>
+                                        <Card.Title><h4 style={{ fontWeight: "500" }}>{movie.headline}</h4></Card.Title>
+                                        <Card.Text>{movie.summary_short}</Card.Text>
+                                        <Card.Text style={{ textAlign: "center" }}>Date: {movie.date_updated}</Card.Text>
+                                        <Button variant="primary">
+                                            <a style={{ textDecoration: "none", color: "inherit", marginBottom: "20px", }} target="_blank" href={movie.link.url}>Watch</a>
+                                        </Button>
+                                        <br />
+                                    </Card.Body>
                                     <br />
-                                </Card.Body>
+                                </Card>
                                 <br />
-                                <Button variant="primary">
-                                    <a style={{ textDecoration: "none", color: "inherit", marginBottom: "20px", }} target="_blank" href={movie.link.url}>Watch</a>
-                                </Button>
-                            </Card>
-                            <br />
-                        </Col>
-                    </Row>)}
+                            </Col>
+                        </Row>)}
+                </div>
 
             </Container>
         );
@@ -55,30 +57,3 @@ class MovieReview extends Component {
 }
 
 export default MovieReview;
-
-
-
-{/* <Button variant="primary" disabled>
-    <Spinner
-      as="span"
-      animation="border"
-      size="sm"
-      role="status"
-      aria-hidden="true"
-    />
-    <span className="sr-only">Loading...</span>
-  </Button>{' '}
-  <Button variant="primary" disabled>
-    <Spinner
-      as="span"
-      animation="grow"
-      size="sm"
-      role="status"
-      aria-hidden="true"
-    />
-    Loading...
-  </Button> */}
-
-
-
-{/*  */ }
