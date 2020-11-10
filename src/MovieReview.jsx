@@ -31,7 +31,7 @@ class MovieReview extends Component {
                 {this.state.movie_reviews.map((movie) =>
                     <Row style={{ textAlign: "center" }}>
                         <Col style={{ margin: "10px 0px", alignItems: "center" }}>
-                                <Card border="primary" style={{  height: '18rem' }}>
+                                <Card border="primary" style={{height: '18rem' }}>
                                     <Card.Header><h3 style={{fontFamily:"arial"}}>{movie.display_title}</h3></Card.Header>
                                     <Card.Title >({movie.byline})</Card.Title>
                                     <Card.Body>
