@@ -33,7 +33,7 @@ class MovieReview extends Component {
                         <Col style={{ margin: "10px 0px", alignItems: "center" }}>
                                 <Card border="primary" style={{height: '23rem' }}>
                                     <Card.Header><h3 style={{fontFamily:"arial"}}>{movie.display_title}</h3></Card.Header>
-                                    <Card.Title >({movie.byline})</Card.Title>
+                                    <Card.Title style={{marginTop:"8px"}}>({movie.byline})</Card.Title>
                                     <Card.Body>
                                         <Card.Title><h4 style={{ fontWeight: "500" }}>{movie.headline}</h4></Card.Title>
                                         <Card.Text>{movie.summary_short}</Card.Text>
