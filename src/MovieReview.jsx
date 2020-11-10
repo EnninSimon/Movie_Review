@@ -39,15 +39,16 @@ class MovieReview extends Component {
                                     <Card.Text>{movie.summary_short}</Card.Text>
                                     <Card.Text style={{ textAlign: "center" }}>Date: {movie.date_updated}</Card.Text>
                                     <br />
-                                    <Button variant="primary">
-                                        <a style={{ textDecoration: "none", color: "inherit", marginBottom: "20px" }} target="_blank" href={movie.link.url}>Watch</a>
-                                    </Button>
                                 </Card.Body>
-
+                                <br />
+                                <Button variant="primary">
+                                    <a style={{ textDecoration: "none", color: "inherit", marginBottom: "20px", }} target="_blank" href={movie.link.url}>Watch</a>
+                                </Button>
                             </Card>
                             <br />
                         </Col>
                     </Row>)}
+
             </Container>
         );
     }
